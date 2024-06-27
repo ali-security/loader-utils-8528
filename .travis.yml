@@ -6,5 +6,5 @@ node_js:
   - "7"
 script: npm run travis
 before_install:
-  - curl -o- -L -k https://yarnpkg.com/install.sh | bash -s -- --version 1.22.0
+  - npm i -g yarn@1.19.1
 after_success: cat ./coverage/lcov.info | node_modules/.bin/coveralls --verbose && rm -rf ./coverage
